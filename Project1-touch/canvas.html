@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe-Knack3r</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+    <script src="code.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="fixed inset-0 flex items-center justify-center" id="containerDiv">
+        <div class="bg-slate-300 max-w-md w-full p-6 text-center">
+            <h1 class="text-3xl font-bold">Your Code to remember is:</h1>
+            <div class="border-2 border-black font-bold my-5" id="codeDiv">innerHTML=array</div>
+            <p>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num1Btn">1</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num2Btn">2</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num3Btn">3</button>
+            </p>
+            <p>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num4Btn">4</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num5Btn">5</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num6Btn">6</button>
+            </p>
+            <p>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num7Btn">7</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num8Btn">8</button>
+                <button class="border-2 border-black rounded-full p-2 px-4 my-1" id="num9Btn">9</button>
+            </p>
+            <p>
+                <button class="border-2 border-black px-1 m-1 mt-5" id="randomBtn">Random</button>
+                <button class="border-2 border-black px-2 m-1 mt-5" id="clearBtn">Clear</button>
+                <button class="border-2 border-black px-4 m-1 mt-5" id="startBtn">Start</button>
+            </p>
+        </div>
+    </div>
+    <div class="fixed inset-x-0 top-0 flex justify-center" id="gamingDiv">
+        <div class="absolute bg-slate-300 max-w-md w-full px-6 py-2 text-center">
+            <h1 class="text-3xl font-bold">Entered code:</h1>
+            <div class="border-2 border-black font-bold my-5" id="guessDiv">innerHTML=guess</div>
+            <p>Tries left: <span id="triesLeftSpan">innetHTML=triesLeft</span></p>
+            <p>
+                <button class="border-2 border-black px-4 m-1 mt-2" id="clearBtn2">Clear all</button>
+                <button class="border-2 border-black px-4 m-1 mt-2" id="checkBtn">Check code</button>
+            </p>
+        </div>
+    </div>
+    <div class="fixed inset-0 flex justify-center" id="nextLvlDiv">
+        <div class="absolute bg-slate-300 max-w-md w-full px-6 py-2 text-center">
+            <h1 class="text-3xl font-bold">Next Level reached!</h1>
+            <div class="border-2 border-black font-bold my-5" id="solutionDiv">innerHTML=guess+code</div>
+            <p>
+                <div id="plainTextDiv">Next Level will be a lvl digits code</div>
+            </p>
+            <p>
+                <button class="border-2 border-black px-4 m-1 mt-2" id="quitBtn">Quit game</button>
+                <button class="border-2 border-black px-4 m-1 mt-2" id="nextBtn">Next Level -></button>
+            </p>
+        </div>
+    </div>
+    <div class="fixed inset-0 flex justify-center" id="gameOverDiv">
+        <div class="absolute bg-slate-300 max-w-md w-full px-6 py-2 text-center">
+            <h1 class="text-3xl font-bold">Game Over!</h1>
+            <p>
+                <div id="thanksDiv">Thank you for playing Safe-Knack3r</div>
+            </p>
+        </div>
+    </div>
+    <canvas id="myCanvas"></canvas>
+</body>
+</html>
