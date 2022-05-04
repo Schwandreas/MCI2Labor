@@ -338,7 +338,7 @@ window.onload = function () {
             bPath.closePath()
             
             ctx.save()
-            ctx.translate(x, y+canvas.height/3-38)
+            ctx.translate(x, y+canvas.height/3-canvas.height/20)
             ctx.scale(7, 7)
             ctx.strokeStyle = c
             ctx.fillStyle = c
