@@ -141,6 +141,8 @@ window.onload = function () {
             } else {
                 guess = []
                 atIndex = 0
+                delta = 0
+                lineArray = []
                 console.log("maybe next time...")
             }
         }
@@ -351,15 +353,15 @@ window.onload = function () {
         isInsideRect(ix, iy, e) {
             if (ix<this.x-100+this.w && ix>this.x-100 && iy<this.y+this.h && iy>this.y) {
                 color = "green"
-                lineArray.push(e.touches[0].pageX)
-                for (let i = 1; i<lineArray.length; i++) {
-                    delta += (lineArray[i-1] - lineArray[i])
-                    if (delta<-600) {
-                        delta = 0
+                if (lineArray.length !== 0) {
+                    lineArray.push(ix)
+                    if (lineArray.length > 2) delta = lineArray[lineArray.length-1] - lineArray[0]
+                    if (delta>130) {
                         swipeEvent()
                     }
                 }
-            } //else console.log("is not inside")
+
+            } else color = "black"
         }
     }
     function drawTutorial() {
@@ -367,7 +369,7 @@ window.onload = function () {
         ctx.beginPath()
         ctx.font="13px Arial"
         ctx.fillStyle = "black"
-        ctx.fillText("Tutorial: swipe FAST! to check", x-115, y+18*(canvas.height/50))
+        ctx.fillText("Tutorial: swipe arrow to check your code.", x-115, y+18*(canvas.height/50))
         ctx.closePath()
         ctx.restore()
     
